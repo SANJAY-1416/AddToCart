@@ -1,0 +1,15 @@
+
+
+
+{
+  "Phones": [
+    { "name": "Iphone", "cost": 60000 },
+    { "name": "Oneplus", "cost": 45000 },
+    { "name": "Samsung", "cost": 40000 },
+    { "name": "Redmi", "cost": 35000 },
+    { "name": "Nokia", "cost": 35000 },
+    { "name": "Oppo", "cost": 30000 },
+    { "name": "Realme", "cost": 32000 },
+    { "name": "Google-pixel", "cost": 50000 }
+  ]
+}

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +30,47 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+} */
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100px; */
+}
+.products button {
+  border: 2px solid black;
+  padding: 10px;
+}
+.parent-product {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+}
+.quantity {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.quantity button {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 40px;
+}
+button {
+  border: 1px solid black;
+  padding: 5px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px;
+}
+.name-cost-quantity {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 72px;
+  align-items: center;
 }
