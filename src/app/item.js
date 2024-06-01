@@ -3,6 +3,9 @@ import { cartContext } from "./useContext/Context";
 export const Item = () => {
   const { cart, clearcart, removeFromCart, increase, decrease, getcartTotal } =
     useContext(cartContext);
+
+  // sum to price
+
   const getSum = () => {
     console.log(cart);
     return cart.reduce((sum, { cost, quantity }) => sum + cost * quantity, 0);

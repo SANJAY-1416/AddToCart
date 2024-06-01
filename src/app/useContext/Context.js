@@ -4,11 +4,10 @@ import React, { createContext, useState } from "react";
 
 const cartContext = createContext();
 
-// const PAGE_PRODUCTS = "products";
-// const PAGE_CART = "cart";
-
 const ContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+
+  // AddToCart Button
 
   const addToCart = (product) => {
     let newCart = [...cart];
@@ -26,20 +25,24 @@ const ContextProvider = ({ children }) => {
     setCart(newCart);
   };
 
+  // Remove product from cart
+
   const removeFromCart = (productToRemove) => {
     setCart(cart.filter((product) => product !== productToRemove));
   };
-  const navigateTo = (nextPage) => {
-    setPage(nextPage);
-  };
 
+  // Increase and Decrease price Accoding to products value
   const getCartTotal = () => {
     return cart.reduce((sum, { quantity }) => sum + quantity, 0);
   };
 
+  // ClearCart
+
   const clearcart = () => {
     setCart([]);
   };
+
+  // Increase Quantity
 
   const increase = (index) => {
     const newCart = [...cart];
@@ -49,6 +52,8 @@ const ContextProvider = ({ children }) => {
     };
     setCart([...newCart]);
   };
+
+  // Decrease Quality
 
   const decrease = (index) => {
     const newCart = [...cart];
@@ -67,12 +72,9 @@ const ContextProvider = ({ children }) => {
         decrease,
         removeFromCart,
         clearcart,
-        navigateTo,
+
         getCartTotal,
         cart,
-        // page,
-        // PAGE_CART,
-        // PAGE_PRODUCTS,
       }}
     >
       {children}

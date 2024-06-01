@@ -3,13 +3,13 @@ import React, { useContext } from "react";
 
 import Records from "./records.json";
 import { cartContext } from "./useContext/Context";
-// import { cartContext } from "./useContext/Context";
 
 const Product = () => {
+  // useContext
   const { addToCart, decrease, increase } = useContext(cartContext);
 
+  // record.json
   const Phones = Records.Phones;
-  //   const [Phones] = useState(Records.Phones);
 
   return (
     <div className="parent-product">
